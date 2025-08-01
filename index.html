@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            text-align: center;
+            margin: auto;
+            margin-top: 200px;
+            height: 300px;
+            width: 250px;
+            background:linear-gradient(rgba(255, 255, 0, 0.344),rgba(231, 15, 15, 0.497)) ;
+            border: 0px solid black;
+            border-radius: 8px;
+        }
+        input{
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            /* text-align: center; */
+            margin-top: 30px;
+            border: none;
+        }
+        button{
+            padding: 15px;
+            border-radius: 8px;
+            width: 80px;
+            margin-top: 30px;
+            /* text-align: center; */
+                        border: none;
+
+        }
+        h1{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+<div><input type="text" placeholder="username"></div>
+  <div><input type="password" placeholder="enter the password👀" id="input1"></div>  
+<div>    <button type="submit" onclick="check()">ok</button></div> 
+
+</div>
+<div><h1 id="noticer"></h1></div>
+</body>
+<script>
+function check(){
+    let pass=document.getElementById("input1").value;
+    let indicate=document.getElementById("noticer")
+    if (pass.length>=8){
+        alert("your password is strong😎")
+        indicate.textContent="password is strong"
+    }
+    else{
+        alert("your password is weak🤦‍♀️")
+        indicate.textContent="password is weak"
+    }
+}
+
+</script>
+</html>
