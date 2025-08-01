@@ -50,18 +50,26 @@
 <div><h1 id="noticer"></h1></div>
 </body>
 <script>
-function check(){
-    let pass=document.getElementById("input1").value;
+// function check(){
+    document.getElementById("input1").addEventListener("input",msg);
     let indicate=document.getElementById("noticer")
+
+    function msg(){
+       let pass=this.value;
+    
     if (pass.length>=8){
-        alert("your password is strong😎")
+        // alert("your password is strong😎")
         indicate.textContent="password is strong"
+        indicate.style.color="green"
     }
     else{
-        alert("your password is weak🤦‍♀️")
+        // alert("your password is weak🤦‍♀️")
         indicate.textContent="password is weak"
+                indicate.style.color="red"
+
     }
 }
+// }
 
 </script>
 </html>
